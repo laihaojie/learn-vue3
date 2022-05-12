@@ -13,7 +13,7 @@ const provides = {
   age: 19,
 }
 Object.keys(provides).forEach((key) => {
-  provide(key, provides[key]);
+  provide(key, provides[key as keyof typeof provides]);
 });
 // provide('name', '张三');
 </script>
