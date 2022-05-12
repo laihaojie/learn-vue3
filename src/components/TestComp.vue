@@ -8,5 +8,5 @@ defineExpose({
 </script>
 
 <template>
-  <div>test1 {{ count }}</div>
+  <div>test {{ count }}</div>
 </template>
