@@ -16,6 +16,15 @@ watch(count, (value) => {
 const name = inject('name')
 const age = inject('age')
 
+const uniTest = () => {
+  // @ts-ignore
+  uni.postMessage({
+    data: {
+      url: "https://s.lingman.tech/dev/uploadfiles/20220320/SxJrpcZ8MGG7jAGSGwzMCzYaSyfJTWdc.png",
+      title: "xxxxx"
+    }
+  });
+}
 
 </script>
 <!-- <script lang="ts">
@@ -29,5 +38,7 @@ export default {
     <div>{{ count }}{{ name }}{{ age }}</div>
     <TestComp ref="test_comp" :count="count"></TestComp>
     <button @click="add">按钮</button>
+
+    <div w30 h30 flex justify-center items-center bg-red text-white @click="uniTest"> uni测试</div>
   </div>
 </template>
