@@ -13,8 +13,8 @@ const router = createRouter({
     { path: '/', component: () => import('./pages/index.vue') },
   ],
 })
-app.config.errorHandler = (e) => {
-  console.log(e);
+app.config.errorHandler = (...ars) => {
+  console.log(ars);
 }
 app.use(router)
 app.mount('#app')
