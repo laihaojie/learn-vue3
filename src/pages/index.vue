@@ -26,8 +26,8 @@ const uniTest = () => {
   });
 }
 const errorTest = () => {
-  // throw new Error('error1111');
-  a.a = 1
+  throw new Error('error1111');
+  // a.a = 1
 }
 
 </script>
