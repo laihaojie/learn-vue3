@@ -25,6 +25,10 @@ const uniTest = () => {
     }
   });
 }
+const errorTest = () => {
+  // throw new Error('error1111');
+  a.a = 1
+}
 
 </script>
 <!-- <script lang="ts">
@@ -39,6 +43,7 @@ export default {
     <TestComp ref="test_comp" :count="count"></TestComp>
     <button @click="add">按钮</button>
 
-    <div w30 h30 flex justify-center items-center bg-red text-white @click="uniTest"> uni测试</div>
+    <div h10 flex justify-center items-center bg-red text-white @click="uniTest"> uni测试</div>
+    <div h10 flex justify-center items-center bg-red text-white @click="errorTest"> errorHandlerTest</div>
   </div>
 </template>

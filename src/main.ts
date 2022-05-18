@@ -13,5 +13,8 @@ const router = createRouter({
     { path: '/', component: () => import('./pages/index.vue') },
   ],
 })
+app.config.errorHandler = (e) => {
+  console.log(e);
+}
 app.use(router)
 app.mount('#app')
