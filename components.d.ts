@@ -8,6 +8,7 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TestComp: typeof import('./src/components/TestComp.vue')['default']
+    TestTemplate: typeof import('./src/components/TestTemplate.vue')['default']
   }
 }
 

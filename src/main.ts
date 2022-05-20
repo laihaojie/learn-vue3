@@ -17,4 +17,12 @@ app.config.errorHandler = (...ars) => {
   console.log(ars);
 }
 app.use(router)
+
+
+app.component('test-cmp', {
+  template: `<div class="demo-tab">Archive component</div>`,
+  // render() { return h('div', 'Archive component') },
+})
+
+
 app.mount('#app')
