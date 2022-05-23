@@ -11,6 +11,7 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     { path: '/', component: () => import('./pages/index.vue') },
+    { path: '/tsx', component: () => import('./pages/tsx/testTsx') },
   ],
 })
 app.config.errorHandler = (...ars) => {

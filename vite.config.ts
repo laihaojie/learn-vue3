@@ -8,6 +8,7 @@ import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Unocss from 'unocss/vite'
 import Inspect from 'vite-plugin-inspect'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 
 export default defineConfig({
   resolve: {
@@ -18,10 +19,12 @@ export default defineConfig({
   },
   plugins: [
     Inspect(), // only applies in dev mode
-    
+
     Vue({
       reactivityTransform: true,
     }),
+
+    vueJsx(),
 
     // https://github.com/hannoeru/vite-plugin-pages
     Pages(),
