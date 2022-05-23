@@ -61,5 +61,14 @@ export default {
 
     <test-cmp></test-cmp>
     <TestFolder></TestFolder>
+
+    <component is="path" />
+
+
+    <path></path>
+    <g></g>
+
+
   </div>
 </template>
+
