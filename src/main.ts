@@ -12,6 +12,7 @@ const router = createRouter({
   routes: [
     { path: '/', component: () => import('./pages/index.vue') },
     { path: '/tsx', component: () => import('./pages/tsx/testTsx') },
+    { path: '/storage', component: () => import('./pages/storage/storage') },
   ],
 })
 app.config.errorHandler = (...ars) => {
