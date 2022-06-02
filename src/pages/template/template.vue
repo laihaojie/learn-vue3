@@ -2,7 +2,7 @@
 import TestComp from "./comp.vue"
 
 const TestView = () => {
-  return h('div', {}, ["test view", HomeView({}), h(TestComp), h(() => h("div", {}, 'div')), h(() => "div1")]);
+  return h('div', {}, ["test view", HomeView({}), h(TestComp), h(() => h("div", {}, 'div')), h(() => "div1"), h({ template: `<div>home view</div>` })]);
 }
 
 
