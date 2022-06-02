@@ -1,7 +1,8 @@
 <script setup lang="ts">
+import TestComp from "./comp.vue"
 
 const TestView = () => {
-  return h('div', {}, ["test view", HomeView({})]);
+  return h('div', {}, ["test view", HomeView({}), h(TestComp), h(() => h("div", {}, 'div')), h(() => "div1")]);
 }
 
 
@@ -25,6 +26,7 @@ const test = () => {
 <template>
   <div class="template">
     <TestView />
+    <!-- <TestComp></TestComp> -->
     <!-- <HomeView @click="test" /> -->
     <!-- <component :is="{ template: `<div>home view</div>` }"></component> -->
   </div>
