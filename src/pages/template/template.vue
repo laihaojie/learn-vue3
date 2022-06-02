@@ -1,6 +1,8 @@
 <script setup lang="ts">
 
-const HomeView = () => {
+const HomeView = (e) => {
+  console.log(e);
+  
   return h('div', {
     onClick: () => {
       console.log('home view click');
