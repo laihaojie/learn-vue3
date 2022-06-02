@@ -1,13 +1,19 @@
 <script setup lang="ts">
 
+const TestView = () => {
+  return h('div', {}, ["test view", HomeView({})]);
+}
+
+
 const HomeView = (e) => {
   console.log(e);
 
   return h('div', {
+    class: 'bg-red-500 text-white',
     onClick: () => {
       console.log('home view click');
     }
-  }, 'home view');
+  }, ["home view"]);
 }
 
 const test = () => {
@@ -18,8 +24,9 @@ const test = () => {
 
 <template>
   <div class="template">
-    <HomeView @click="test" />
-    <component :is="{ template: `<div>home view</div>`}"></component>
+    <TestView />
+    <!-- <HomeView @click="test" /> -->
+    <!-- <component :is="{ template: `<div>home view</div>` }"></component> -->
   </div>
 </template>
 
