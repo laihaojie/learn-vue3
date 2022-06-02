@@ -2,12 +2,12 @@
 
 const HomeView = (e) => {
   console.log(e);
-  
+
   return h('div', {
     onClick: () => {
       console.log('home view click');
     }
-  }, 'home-view')
+  }, 'home view');
 }
 
 const test = () => {
@@ -17,9 +17,9 @@ const test = () => {
 </script>
 
 <template>
-  <div>
+  <div class="template">
     <HomeView @click="test" />
-
+    <component :is="{ template: `<div>home view</div>`}"></component>
   </div>
 </template>
 
