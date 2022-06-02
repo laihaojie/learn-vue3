@@ -1,14 +1,22 @@
 <script setup lang="ts">
 
 const HomeView = () => {
-  return h('div', 'home-view')
+  return h('div', {
+    onClick: () => {
+      console.log('home view click');
+    }
+  }, 'home-view')
+}
+
+const test = () => {
+  console.log(1)
 }
 
 </script>
 
 <template>
   <div>
-    <HomeView />
+    <HomeView @click="test" />
 
   </div>
 </template>
