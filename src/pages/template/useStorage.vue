@@ -2,18 +2,20 @@
 
 import { useStorage } from '@vueuse/core'
 
-const state = useStorage('vue-use-local-storage', {
+const state = ref({
   name: 'Banana',
   color: 'Yellow',
   size: 'Medium',
   count: 0,
 })
 
+useStorage('vue-use-local-storage', state)
+
 const text = JSON.stringify(state)
 </script>
 
 <template>
-  <div flex flex-col>
+  <div class="flex flex-col">
     <input v-model="state.name" type="text">
     <input v-model="state.color" type="text">
     <input v-model="state.size" type="text">
