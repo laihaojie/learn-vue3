@@ -16,7 +16,7 @@ const modules = Object.entries(modulesFiles).map(([path, mod]) => {
   const moduleName = path.replace(regex, '$1')
   return {
     path: `/${moduleName}`,
-    component: () => import(path)
+    component: () => import(/* @vite-ignore */ path)
   }
 })
 
