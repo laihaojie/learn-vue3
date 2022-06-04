@@ -15,7 +15,7 @@ const text = JSON.stringify(state)
 </script>
 
 <template>
-  <div class="flex flex-col">
+  <div flex flex-col>
     <input v-model="state.name" type="text">
     <input v-model="state.color" type="text">
     <input v-model="state.size" type="text">
