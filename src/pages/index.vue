@@ -1,34 +1,34 @@
 <script setup lang="ts">
-const count = ref(0);
-const test_comp = ref<{ a: number } | null>(null);
+const count = ref(0)
+const test_comp = ref<{ a: number } | null>(null)
 // const temp = '<div>111</div>'
 
 // const cp = markRaw({
 //   template: temp
 // })
 const add = () => {
-  count.value++;
+  count.value++
 }
 onMounted(async () => {
-  await nextTick();
-  console.log(test_comp.value?.a);
-});
+  await nextTick()
+  console.log(test_comp.value?.a)
+})
 
 watch(count, (value) => {
-  console.log(value);
-});
+  console.log(value)
+})
 
 const name = inject('name')
 const age = inject('age')
 
 const uniTest = () => {
-  // @ts-ignore
+  // @ts-expect-error xxx
   uni.postMessage({
     data: {
-      url: "https://s.lingman.tech/dev/uploadfiles/20220320/SxJrpcZ8MGG7jAGSGwzMCzYaSyfJTWdc.png",
-      title: "xxxxx"
-    }
-  });
+      url: 'https://s.lingman.tech/dev/uploadfiles/20220320/SxJrpcZ8MGG7jAGSGwzMCzYaSyfJTWdc.png',
+      title: 'xxxxx',
+    },
+  })
 }
 const errorTest = () => {
   // throw new Error('error1111');
@@ -37,7 +37,6 @@ const errorTest = () => {
 
 // const comp = { name: 'Test', render: () => h('div', 'test1') }
 // const comp1 = { name: 'Test1', template: `<div>test2222</div>`, props: { a: String } }
-
 </script>
 <!-- <script lang="ts">
 export default {
@@ -48,7 +47,7 @@ export default {
 <template>
   <div>
     <div>{{ count }}{{ name }}{{ age }}</div>
-    <TestComp ref="test_comp" :count="count"></TestComp>
+    <TestComp ref="test_comp" :count="count" />
     <button @click="add">按钮</button>
 
     <div h10 flex justify-center items-center bg-red text-white @click="uniTest"> uni测试</div>
@@ -59,16 +58,13 @@ export default {
     <!-- <component :is="comp"></component> -->
     <!-- <div is="vue:comp1"></div> -->
 
-    <test-cmp></test-cmp>
-    <TestFolder></TestFolder>
+    <test-cmp />
+    <TestFolder />
 
     <component is="path" />
 
-
-    <path></path>
-    <g></g>
-
-
+    <path />
+    <g />
   </div>
 </template>
 

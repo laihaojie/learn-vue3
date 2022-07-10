@@ -14,7 +14,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '~/': `${path.resolve(__dirname, 'src')}/`,
-      'vue': 'vue/dist/vue.esm-bundler.js'
+      'vue': 'vue/dist/vue.esm-bundler.js',
     },
   },
   plugins: [
@@ -40,9 +40,9 @@ export default defineConfig({
       dts: true,
       eslintrc: {
         enabled: true,
-        filepath: "./.eslint.eslintrc.json",
-        globalsPropValue: true
-      }
+        filepath: './.eslint.eslintrc.json',
+        globalsPropValue: true,
+      },
     }),
 
     // https://github.com/antfu/vite-plugin-components
@@ -60,6 +60,6 @@ export default defineConfig({
     environment: 'jsdom',
   },
   server: {
-    host: "0.0.0.0",
-  }
+    host: '0.0.0.0',
+  },
 })

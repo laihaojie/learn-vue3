@@ -8,18 +8,17 @@ import 'uno.css'
 
 const app = createApp(App)
 
+const modulesFiles = import.meta.globEager('./pages/template/*')
 
-const modulesFiles = import.meta.globEager('./pages/template/*');
-
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const modules = Object.entries(modulesFiles).map(([path, mod]) => {
-  const regex = /^\.\/pages\/template\/(.*)\.vue$/;
+  const regex = /^\.\/pages\/template\/(.*)\.vue$/
   const moduleName = path.replace(regex, '$1')
   return {
     path: `/${moduleName}`,
-    component: () => import(/* @vite-ignore */ path)
+    component: () => import(/* @vite-ignore */ path),
   }
 })
-
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -31,15 +30,13 @@ const router = createRouter({
   ],
 })
 app.config.errorHandler = (...ars) => {
-  console.log(ars);
+  console.log(ars)
 }
 app.use(router)
 
-
-app.component('test-cmp', {
-  template: `<div class="demo-tab">Archive component</div>`,
+app.component('TestCmp', {
+  template: '<div class="demo-tab">Archive component</div>',
   // render() { return h('div', 'Archive component') },
 })
-
 
 app.mount('#app')

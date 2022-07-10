@@ -2,9 +2,9 @@ export default defineComponent({
 
   setup() {
     const a = ref(1)
-    const state = useStorage("state", { a: 1 })
-    console.log(state);
-    console.log(a);
+    const state = useStorage('state', { a: 1 })
+    console.log(state)
+    console.log(a)
 
     return () => {
       return (
@@ -13,6 +13,6 @@ export default defineComponent({
         </div>
       )
     }
-  }
+  },
 
 })

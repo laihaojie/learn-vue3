@@ -3,7 +3,7 @@ defineProps({
   count: Number,
 })
 defineExpose({
-  a: 1
+  a: 1,
 })
 </script>
 

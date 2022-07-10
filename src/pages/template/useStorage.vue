@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 import { useStorage } from '@vueuse/core'
 
 const state = ref({
