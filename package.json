@@ -11,9 +11,9 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@vueuse/core": "^8.9.1",
+    "@vueuse/core": "^8.9.2",
     "vue": "^3.2.37",
-    "vue-router": "^4.1.1"
+    "vue-router": "^4.1.2"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.23.1",
@@ -26,16 +26,17 @@
     "@vue/test-utils": "^2.0.2",
     "eslint": "^8.19.0",
     "jsdom": "^19.0.0",
-    "pnpm": "^7.5.0",
+    "pnpm": "^7.5.1",
     "typescript": "^4.7.4",
     "unocss": "^0.33.5",
     "unplugin-auto-import": "^0.7.2",
     "unplugin-vue-components": "^0.21.1",
     "vite": "^2.9.14",
+    "vite-plugin-dynamic-import": "^1.0.0",
     "vite-plugin-inspect": "^0.5.1",
     "vite-plugin-pages": "^0.25.0",
     "vitest": "^0.18.0",
-    "vue-tsc": "^0.38.3"
+    "vue-tsc": "^0.38.5"
   },
   "eslintConfig": {
     "extends": "@antfu"

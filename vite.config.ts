@@ -59,6 +59,7 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
   },
+  root: '.',
   server: {
     host: '0.0.0.0',
   },

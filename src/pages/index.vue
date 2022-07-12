@@ -61,7 +61,7 @@ export default {
     <test-cmp />
     <TestFolder />
 
-    <component is="path" />
+    <!-- <component is="path" /> -->
 
     <path />
     <g />
