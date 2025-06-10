@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import TestComp from './comp.vue'
 
-const TestView = () => {
+function TestView() {
   return h('div', {}, ['test view', HomeView({}), h(TestComp), h(() => h('div', {}, 'div')), h(() => 'div1'), h({ template: '<div>home view</div>' })])
 }
 
-const HomeView = (e) => {
+function HomeView(e) {
   console.log(e)
 
   return h('div', {
@@ -16,7 +16,7 @@ const HomeView = (e) => {
   }, ['home view'])
 }
 
-const test = () => {
+function test() {
   console.log(1)
 }
 </script>

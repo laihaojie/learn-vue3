@@ -6,7 +6,7 @@ const test_comp = ref<{ a: number } | null>(null)
 // const cp = markRaw({
 //   template: temp
 // })
-const add = () => {
+function add() {
   count.value++
 }
 onMounted(async () => {
@@ -21,7 +21,7 @@ watch(count, (value) => {
 const name = inject('name')
 const age = inject('age')
 
-const uniTest = () => {
+function uniTest() {
   // @ts-expect-error xxx
   uni.postMessage({
     data: {
@@ -30,7 +30,7 @@ const uniTest = () => {
     },
   })
 }
-const errorTest = () => {
+function errorTest() {
   // throw new Error('error1111');
   // a.a = 1
 }
@@ -67,4 +67,3 @@ export default {
     <g />
   </div>
 </template>
-

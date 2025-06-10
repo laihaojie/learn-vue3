@@ -6,7 +6,10 @@ export default defineComponent({
     return () => {
       return (
         <div>
-          <h1>Hello World {count.value}</h1>
+          <h1>
+            Hello World
+            {count.value}
+          </h1>
         </div>
       )
     }

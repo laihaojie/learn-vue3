@@ -3,7 +3,7 @@
 </script>
 
 <template>
- <div>测试组件</div>
+  <div>测试组件</div>
 </template>
 
 <style lang='scss' scoped>

@@ -9,7 +9,10 @@ export default defineComponent({
     return () => {
       return (
         <div>
-          <h1> {state.value.a}</h1>
+          <h1>
+            {' '}
+            {state.value.a}
+          </h1>
         </div>
       )
     }
