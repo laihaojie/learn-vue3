@@ -20,9 +20,7 @@ export default defineConfig({
   plugins: [
     Inspect(), // only applies in dev mode
 
-    Vue({
-      reactivityTransform: true,
-    }),
+    Vue(),
 
     vueJsx(),
 
@@ -38,11 +36,6 @@ export default defineConfig({
         '@vueuse/core',
       ],
       dts: true,
-      eslintrc: {
-        enabled: true,
-        filepath: './.eslint.eslintrc.json',
-        globalsPropValue: true,
-      },
     }),
 
     // https://github.com/antfu/vite-plugin-components
@@ -61,6 +54,6 @@ export default defineConfig({
   },
   root: '.',
   server: {
-    host: '0.0.0.0',
+    host: true,
   },
 })

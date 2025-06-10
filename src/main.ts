@@ -8,7 +8,7 @@ import 'uno.css'
 
 const app = createApp(App)
 
-const modulesFiles = import.meta.globEager('./pages/template/*')
+const modulesFiles = import.meta.glob('./pages/template/*')
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const modules = Object.entries(modulesFiles).map(([path, mod]) => {
