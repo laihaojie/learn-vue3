@@ -35,5 +35,10 @@
     "vite-plugin-pages": "^0.33.0",
     "vitest": "^3.2.3",
     "vue-tsc": "^2.2.10"
+  },
+  "pnpm": {
+    "overrides": {
+      "vite": "npm:rolldown-vite@latest"
+    }
   }
 }
