@@ -9,6 +9,8 @@ import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
 import Inspect from 'vite-plugin-inspect'
 import Pages from 'vite-plugin-pages'
+import devtoolsJson from 'vite-plugin-devtools-json';
+
 
 export default defineConfig({
   resolve: {
@@ -18,6 +20,7 @@ export default defineConfig({
     },
   },
   plugins: [
+    devtoolsJson(),
     Inspect(), // only applies in dev mode
 
     Vue(),
